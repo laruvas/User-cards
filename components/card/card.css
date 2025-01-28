@@ -28,3 +28,10 @@
 .card p:first-of-type {
   color: #878787;
 }
+
+.card:hover {
+  box-shadow:  4px 4px 6px 0 rgba(44, 4, 119, 0.5),
+              -4px -4px 6px 0 rgba(59, 2, 194, 0.5), 
+    inset -4px -4px 6px 0 rgba(86, 6, 160, 0.2),
+    inset 4px 4px 6px 0 rgba(95, 8, 207, 0.4);
+}

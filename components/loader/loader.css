@@ -4,3 +4,8 @@
   margin: 20px auto;
   color: #333;
 }
+
+.loader img {
+  width: 100px; /* Установите желаемый размер */
+  height: auto;
+}
