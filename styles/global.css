@@ -45,13 +45,3 @@ button {
   font: inherit;
 }
 
-.loader {
-  display: none; /* Скрыть по умолчанию */
-  text-align: center; /* Центрировать содержимое */
-  margin-top: 60px; /* Отступ сверху */
-}
-
-.loader img {
-  width: 100px; /* Установите желаемый размер */
-  height: auto;
-}

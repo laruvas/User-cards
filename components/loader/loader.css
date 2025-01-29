@@ -1,11 +1,16 @@
+.loader img {
+  width: 100px; 
+  height: auto;
+}
+
 .loader {
   display: none;
   text-align: center;
-  margin: 20px auto;
-  color: #333;
+  margin-top: 60px; 
 }
 
 .loader img {
-  width: 100px; /* Установите желаемый размер */
+  width: 100px; 
   height: auto;
 }
+
