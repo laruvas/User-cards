@@ -41,22 +41,16 @@ function clearContainer() {
 
 // Функция для отображения пользователей
 function displayUsers() {
-  // 1. Вызовите функцию showLoader, чтобы сделать лоадер видимым перед началом загрузки данных
   showLoader();
-  // 2. Вызовите функцию clearContainer для удаления старых карточек пользователей.
  clearContainer();
 
   // Принудительная задержка
-  // 3. Вызовите setTimeout с таймаутом в 2000 миллисекунд
 setTimeout(() => {
 fetchUsers()
+
  .then(users => {
-    // 5. После получения данных выполните обработку через .then()
-    // 5.1. Внутри .then() пройдитесь по массиву пользователей с помощью метода .forEach
     users.forEach(user => {
-      // 5.2. Для каждого пользователя вызовите функцию createUser Card(user), чтобы создать карточку.
       const userCard = createUser (user);
-      // 5.3. Добавьте карточку в контейнер userCardsContainer с помощью appendChild.
       userCardsContainer.appendChild(userCard);
     });
   })
@@ -66,7 +60,6 @@ fetchUsers()
       "<p style='font-size: 30px; text-align: center;'>Error loading users. Please try again later.</p>";
   })
   .finally(() => {
-    // 6. Независимо от результата (успех или ошибка), вызовите hideLoader внутри блока .finally():
  hideLoader();
   });
 } , "2000")};
@@ -77,9 +70,7 @@ function resetPage() {
 }
 
 // Обработчик для запроса пользователей с сервера
-// 7. Добавьте обработчик события click на кнопку btnShowUsersCards и в качестве коллбэка передайте функцию displayUsers
 btnShowUsersCards.addEventListener('click',displayUsers);
 // Обработчик для очистки пользователей на странице
-// 8. Добавьте обработчик события click на кнопку btnResetPage и в качестве коллбэка передайте функцию resetPage
 btnResetPage.addEventListener('click',resetPage);
 
